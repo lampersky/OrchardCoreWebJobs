@@ -25,16 +25,13 @@ namespace Repro.WebJobs
                 {
                     webJobsBuilder.AddAzureStorageCoreServices();
                     webJobsBuilder.AddTimers();
+                    //uncomment when 'AzureWebJobsStorage' connection string is valid
+                    //webJobsBuilder.AddAzureStorageQueues();
                 })
                 .ConfigureLogging((hostBuilderContext, loggingBuilder) =>
                 {
                     loggingBuilder.SetMinimumLevel(LogLevel.Debug);
                     loggingBuilder.AddConsole();
-                    var appInsightsKey = hostBuilderContext.Configuration["APPINSIGHTS_INSTRUMENTATIONKEY"];
-                    if (!string.IsNullOrEmpty(appInsightsKey))
-                    {
-                        loggingBuilder.AddApplicationInsightsWebJobs(o => o.InstrumentationKey = appInsightsKey);
-                    }
                 })
                 .UseConsoleLifetime();
 
