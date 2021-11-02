@@ -1,0 +1,6 @@
+Repro.WebJobs/bin/
+Repro.WebJobs/Localization/
+Repro.WebJobs/obj/
+Repro.Web/obj/
+Repro.Web/App_Data/Sites/Default/DataProtection-Keys/
+Repro.Web/.vs/
