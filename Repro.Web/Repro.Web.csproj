@@ -13,7 +13,12 @@
 
     <ItemGroup>
         <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="1.2.0-preview-16547" />
+        <PackageReference Include="OrchardCore.Shells.Azure" Version="1.2.0-preview-16547" />
         <PackageReference Include="OrchardCore.Logging.NLog" Version="1.2.0-preview-16547" />
     </ItemGroup>
+
+    <Target Name="PostpublishScript" AfterTargets="Publish">
+        <Exec Command="dotnet publish ..\Repro.WebJobs\ -o $(PublishDir)App_Data\Jobs\Continuous\Repro.WebJobs --configuration $(Configuration)" />
+    </Target>
 
 </Project>

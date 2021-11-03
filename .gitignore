@@ -4,3 +4,8 @@ Repro.WebJobs/obj/
 Repro.Web/obj/
 Repro.Web/App_Data/Sites/Default/DataProtection-Keys/
 Repro.Web/.vs/
+Repro.Web/bin/
+Repro.Web/Localization/
+Repro.Web/Properties/PublishProfiles/
+Repro.Web/Properties/ServiceDependencies/
+Repro.Web/.config/

@@ -15,6 +15,7 @@
 
     <ItemGroup>
         <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="1.2.0-preview-16547" />
+        <PackageReference Include="OrchardCore.Shells.Azure" Version="1.2.0-preview-16547" />
     </ItemGroup>
 
     <ItemGroup Label="Use appSetting.json from web project">
@@ -24,7 +25,7 @@
     </ItemGroup>
     
     <ItemGroup Label="Use existing App_Data configuration">
-        <Content Include="..\Repro.Web\App_Data\**\*.*">
+        <Content Include="..\Repro.Web\App_Data\**\*.*" Visible="false">
             <Link>App_Data\%(RecursiveDir)%(Filename)%(Extension)</Link>
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </Content>

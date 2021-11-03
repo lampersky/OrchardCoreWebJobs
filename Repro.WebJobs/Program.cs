@@ -44,7 +44,7 @@ namespace Repro.WebJobs
 
         private static void ConfigureServices(IServiceCollection serviceCollection, IConfiguration configuration)
         {
-            serviceCollection.AddOrchardCms();
+            serviceCollection.AddOrchardCms().AddAzureShellsConfiguration();
         }
     }
 }

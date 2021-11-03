@@ -8,7 +8,7 @@ namespace Repro.Web
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddOrchardCms();
+            services.AddOrchardCms().AddAzureShellsConfiguration();
         }
         
         public void Configure(IApplicationBuilder app, IHostEnvironment env)
