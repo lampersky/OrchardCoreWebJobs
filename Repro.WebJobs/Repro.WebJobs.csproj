@@ -24,13 +24,6 @@
         </Content>
     </ItemGroup>
     
-    <ItemGroup Label="Use existing App_Data configuration">
-        <Content Include="..\Repro.Web\App_Data\**\*.*" Visible="false">
-            <Link>App_Data\%(RecursiveDir)%(Filename)%(Extension)</Link>
-            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </Content>
-    </ItemGroup>
-
     <ItemGroup Label="Orchard requires wwwroot to use it as cache">
         <Content Include="wwwroot\**\*.*" Visible="false">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
